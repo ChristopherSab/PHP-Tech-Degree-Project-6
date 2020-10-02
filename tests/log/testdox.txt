@@ -1,3 +1,9 @@
 Listing Basic
- [ ] Listing basic must receive data
+ [x] Listing basic must receive data
+ [x] Needs valid id to create a listing
+
+Listing Image
+ [ ] No image
+ [ ] Full path image
+ [ ] Build path image
 
