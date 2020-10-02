@@ -45,3 +45,4 @@ class ListingImageTest extends TestCase
         $this->assertEquals(BASE_URL.'/'.$data['image'], $listing->getImage());
     }
 }
+

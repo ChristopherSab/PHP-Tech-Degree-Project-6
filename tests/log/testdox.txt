@@ -1,5 +1,3 @@
-Listing Image
- [ ] No image
- [ ] Full path image
- [ ] Build path image
+Listing Basic
+ [ ] Listing basic must receive data
 
