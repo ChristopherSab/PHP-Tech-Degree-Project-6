@@ -58,7 +58,7 @@ class ListingBasicTest extends TestCase
     /** @test */
     function theGetMethodsReturnTheCorrectResults() //This test checks that the id, title, website, email & twitter return correct results
     {
-
+        //data to test the various methods
         $data = [
             "id" => 1, 
             "title" => "test",
@@ -77,8 +77,31 @@ class ListingBasicTest extends TestCase
 
     }
 
-    
+    /** @test */
+    function toArrayMethodReturnsAnArrayWhereEachItemEqualExpectedResults()
+    {
 
+        //data to test the various methods
+        $data = [
+            "id" => 1, 
+            "title" => "test",
+            "website" => "https://www.test.com",
+            "email" => "test@example.com",
+            "twitter" => "TestTwitter"
+        ];
+
+        $listingBasic = new ListingBasic($data);
+
+        $this->assertEquals([
+            "id" => 1, 
+            "title" => "test",
+            "website" => "https://www.test.com",
+            "email" => "test@example.com",
+            "twitter" => "TestTwitter",
+            "status" => "basic"
+        ], $listingBasic->toArray());
+
+    }
 
 
 }
