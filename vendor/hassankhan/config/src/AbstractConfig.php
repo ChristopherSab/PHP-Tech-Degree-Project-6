@@ -28,7 +28,7 @@ abstract class AbstractConfig implements ArrayAccess, ConfigInterface, Iterator
      *
      * @var array
      */
-    protected $cache = [];
+    protected $cache = array();
 
     /**
      * Constructor method and sets default options, if any
@@ -50,7 +50,7 @@ abstract class AbstractConfig implements ArrayAccess, ConfigInterface, Iterator
      */
     protected function getDefaults()
     {
-        return [];
+        return array();
     }
 
     /**
@@ -85,7 +85,7 @@ abstract class AbstractConfig implements ArrayAccess, ConfigInterface, Iterator
             }
             $cacheKey .= $part;
             if (!isset($root[$part]) && count($segs)) {
-                $root[$part] = [];
+                $root[$part] = array();
             }
             $root = &$root[$part];
 
@@ -135,18 +135,6 @@ abstract class AbstractConfig implements ArrayAccess, ConfigInterface, Iterator
         $this->cache[$key] = $root;
 
         return true;
-    }
-
-    /**
-     * Merge config from another instance
-     *
-     * @param ConfigInterface $config
-     * @return ConfigInterface
-     */
-    public function merge(ConfigInterface $config)
-    {
-        $this->data = array_replace_recursive($this->data, $config->all());
-        return $this;
     }
 
     /**

@@ -1,6 +1,6 @@
-# CodeDungeon PHPUnit Pretty Result Printer
+# CD PHPUnit Pretty Result Printer
 
-Version 0.29.2
+Version 0.26
 Extend the default PHPUnit Result Printer with a modern, pretty printer!
 
 ---
@@ -9,20 +9,10 @@ Extend the default PHPUnit Result Printer with a modern, pretty printer!
 
 ## Installation
 
-Installation provided via composer and can be done with the following command, the current version requires PHP 7.1 or greater:
+Installation is provided via composer and can be done with the following command, the current version requires PHP 7.1 or greater:
 
 ```bash
 > composer require --dev codedungeon/phpunit-result-printer
-```
-
-### Upgrading to >= 0.29.x
-
-If you are upgrading from previous verison and have published `phpunit-printer.yml` locally, make sure add the following to the options section
-
-```yml
-  ...
-  cd-printer-dont-format-classname: false
-  ...
 ```
 
 ### Execute Initialization Script (Optional)
@@ -68,7 +58,6 @@ If you have AnyBar installed, it will be enabled by default. You can disable usi
 [https://github.com/tonsky/AnyBar](https://github.com/tonsky/AnyBar)
 
 **Anybar is off by default, thus you will need to set the `cd-printer-anybar` option in the `phpunit-printer.yml` to `true` if you wish to use Anybar.
-
 This has been done to address issues with using CI tools such as travis (please see [Issue 122](https://github.com/mikeerickson/phpunit-pretty-result-printer/issues/122) for details) **
 
 _NOTE: AnyBar is only available with PHPUnit 7.1 or greater.
@@ -89,10 +78,6 @@ If you need support for previous versions, please let us know. We are slowly dep
 | `cd-printer-hide-namespace` | true        | Hide test class namespaces (will only show print class name)         |
 | `cd-printer-anybar`         | true        | Enable AnyBar (if anybar is not installed, settings will be ignored) |
 | `cd-printer-anybar-port`    | 1738        | Define AnyBar port number                                            |
-| `cd-printer-dont-format-classname`| false |Show entire classname*
-
-- If `cd-printer-hide-namespace` set to `false` and `cd-printer-dont-format-classname` to `false` will attempt to keep everyting formatted
-- If `cd-printer-dont-format-classname` nothing will be formatted and full classname will be displayed
 
 #### Markers
 
@@ -111,7 +96,7 @@ _\* Notice space after each marker. This makes the output a little more visually
 
 ## License
 
-Copyright &copy; 2017-2021 Mike Erickson
+Copyright &copy; 2017-2019 Mike Erickson
 Released under the MIT license
 
 ## Credits

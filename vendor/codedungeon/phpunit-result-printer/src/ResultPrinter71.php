@@ -16,8 +16,6 @@ $high = true; // version_compare(Version::series(),'7.1.99','<=');
 if ($low && $high) {
     class ResultPrinter71 extends ResultPrinter
     {
-        use PrinterTrait;
-
         private $defectListPrinted = false;
 
         private $reverse = true;
@@ -85,7 +83,7 @@ if ($low && $high) {
             return "$exceptionMessage";
         }
 
-        protected function printDefectTrace(TestFailure $defect): void
+        protected function printDefectTrace(TestFailure $defect):void
         {
             $this->write($this->formatExceptionMsg($defect->getExceptionAsString()));
             $trace = Filter::getFilteredStacktrace(
@@ -98,8 +96,8 @@ if ($low && $high) {
             while ($exception) {
                 $this->write(
                     "\nCaused by\n" .
-                        TestFailure::exceptionToString($exception) . "\n" .
-                        Filter::getFilteredStacktrace($exception)
+                    TestFailure::exceptionToString($exception) . "\n" .
+                    Filter::getFilteredStacktrace($exception)
                 );
                 $exception = $exception->getPrevious();
             }

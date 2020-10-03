@@ -1,6 +1,6 @@
 <?php
 
-namespace Noodlehaus\Parser;
+namespace Noodlehaus\FileParser;
 
 /**
  * Config file parser interface
@@ -8,29 +8,19 @@ namespace Noodlehaus\Parser;
  * @package    Config
  * @author     Jesus A. Domingo <jesus.domingo@gmail.com>
  * @author     Hassan Khan <contact@hassankhan.me>
- * @author     Filip Š <projects@filips.si>
  * @link       https://github.com/noodlehaus/config
  * @license    MIT
  */
-interface ParserInterface
+interface FileParserInterface
 {
     /**
-     * Parses a configuration from file `$filename` and gets its contents as an array
+     * Parses a file from `$path` and gets its contents as an array
      *
-     * @param  string $filename
-     *
-     * @return array
-     */
-    public function parseFile($filename);
-
-    /**
-     * Parses a configuration from string `$config` and gets its contents as an array
-     *
-     * @param  string $config
+     * @param  string $path
      *
      * @return array
      */
-    public function parseString($config);
+    public function parse($path);
 
     /**
      * Returns an array of allowed file extensions for this parser

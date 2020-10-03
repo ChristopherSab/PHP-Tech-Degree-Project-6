@@ -51,10 +51,34 @@ class ListingBasicTest extends TestCase
         $expected = "basic";
         $actual = $listingBasic->getStatus();
 
-        $this->assertEquals($expected, $actual);  
-         
+        $this->assertEquals($expected, $actual);    
 
     }
+
+    /** @test */
+    function theGetMethodsReturnTheCorrectResults() //This test checks that the id, title, website, email & twitter return correct results
+    {
+
+        $data = [
+            "id" => 1, 
+            "title" => "test",
+            "website" => "https://www.test.com",
+            "email" => "test@example.com",
+            "twitter" => "TestTwitter"
+        ];
+
+        $listingBasic = new ListingBasic($data);
+
+        $this->assertEquals($data["id"], $listingBasic->getId());
+        $this->assertEquals($data["title"], $listingBasic->getTitle());
+        $this->assertEquals($data["website"], $listingBasic->getWebsite());
+        $this->assertEquals($data["email"], $listingBasic->getEmail());
+        $this->assertEquals($data["twitter"], $listingBasic->getTwitter());
+
+    }
+
+    
+
 
 
 }
