@@ -33,5 +33,13 @@ class ListingBasicTest extends TestCase
         $listingBasic->setValues($data = ["id" => 1, "title" => null]);
     }
 
+    /** @test */
+    function anObjectIsCreatedWithTheMinimumRequiredIdAndTitle()
+    {
+        $data = ["id" => 1, "title" => "test"];
+        $listingBasic = new ListingBasic($data);
+        $this->assertIsObject($listingBasic);
+    }
+
 
 }
