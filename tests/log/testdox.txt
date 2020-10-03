@@ -1,6 +1,7 @@
 Listing Basic
  [x] Listing basic must receive data
  [x] Needs valid id to create a listing
+ [x] Needs valid title to create a listing
 
 Listing Image
  [ ] No image

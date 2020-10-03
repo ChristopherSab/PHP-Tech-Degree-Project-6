@@ -18,8 +18,19 @@ class ListingBasicTest extends TestCase
     function needsValidIdToCreateAListing()
     {
         $this->expectException(Exception::class);
-        $listingBasic = new ListingBasic();
-        $listingBasic->setValues(); 
+
+        $data = ["id" => null, "title" => "test"];
+        $listingBasic = new ListingBasic($data);
+        $listingBasic->setValues($data = ["id" => null, "title" => "test"]); 
+    }
+
+    /** @test */
+    function needsValidTitleToCreateAListing()
+    {
+        $this->expectException(Exception::class);
+        $data = ["id" => 1, "title" => null];
+        $listingBasic = new ListingBasic($data);
+        $listingBasic->setValues($data = ["id" => 1, "title" => null]);
     }
 
 
