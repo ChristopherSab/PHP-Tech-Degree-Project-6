@@ -7,8 +7,16 @@ Listing Basic
  [x] The get methods return the correct results
  [x] To array method returns an array where each item equal expected results
 
+Listing Featured
+ [x] The get status method returns featured
+ [x] The get coc method returns correct result
+
 Listing Image
  [ ] No image
  [ ] Full path image
  [ ] Build path image
+
+Listing Premium
+ [x] The get status method returns premium
+ [x] The get description method returns correct result
 
