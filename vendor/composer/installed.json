@@ -2133,8 +2133,8 @@
     },
     {
         "name": "symfony/yaml",
-        "version": "v4.4.14",
-        "version_normalized": "4.4.14.0",
+        "version": "v4.4.15",
+        "version_normalized": "4.4.15.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/yaml.git",
