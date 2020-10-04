@@ -24,7 +24,6 @@ class ListingFeaturedTest extends TestCase
     function theGetCocMethodReturnsCorrectResult()
     {
 
-    
         $data = ["id" => 1, "title" => "test"];
         $listingFeatured = new ListingFeatured($data);
     

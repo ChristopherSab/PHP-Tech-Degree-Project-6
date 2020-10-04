@@ -87,7 +87,9 @@ class ListingBasicTest extends TestCase
             "title" => "test",
             "website" => "https://www.test.com",
             "email" => "test@example.com",
-            "twitter" => "TestTwitter"
+            "twitter" => "TestTwitter",
+            "image" => "https://www.test.com/image"
+
         ];
 
         $listingBasic = new ListingBasic($data);
@@ -98,6 +100,7 @@ class ListingBasicTest extends TestCase
             "website" => "https://www.test.com",
             "email" => "test@example.com",
             "twitter" => "TestTwitter",
+            "image" => "https://www.test.com/image",
             "status" => "basic"
         ], $listingBasic->toArray());
 
