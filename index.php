@@ -1,6 +1,10 @@
 <?php
 include 'inc/config.php';
 
+echo phpinfo();
+
+die();
+
 $filter = ['status'=>'active'];
 if (isset($_GET['status'])) {
     $filter['status'] = filter_input(
